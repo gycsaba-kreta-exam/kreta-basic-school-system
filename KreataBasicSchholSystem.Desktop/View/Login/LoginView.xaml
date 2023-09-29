@@ -11,7 +11,9 @@
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown"
         >
-    <Grid>
-        
-    </Grid>
+    <Border CornerRadius="58"
+            Background="#3D98A3"
+            BorderThickness="5"
+     >
+    </Border>
 </Window>
