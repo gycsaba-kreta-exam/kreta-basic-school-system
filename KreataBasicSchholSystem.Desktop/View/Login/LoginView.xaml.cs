@@ -23,5 +23,10 @@ namespace KreataBasicSchholSystem.Desktop.View.Login
         {
             InitializeComponent();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
