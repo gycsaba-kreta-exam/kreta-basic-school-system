@@ -13,11 +13,11 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         >
-    <Border CornerRadius="58">
+    <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/Images/back-image.jpg" />
         </Border.Background>
-        <Border CornerRadius="58"                
+        <Border CornerRadius="10"                
                 Background="#3D98A3"
                 BorderThickness="5"
                 Opacity="0.75">
@@ -28,18 +28,7 @@
                     <GradientStop Color="#083A4D" Offset="0"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30" />
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="25"/>
-                    <ColumnDefinition Width="25"/>
-                    <ColumnDefinition Width="5"/>
-                </Grid.ColumnDefinitions>
-            </Grid>
+
         </Border>
     </Border>
 </Window>
