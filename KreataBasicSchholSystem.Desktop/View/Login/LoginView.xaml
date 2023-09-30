@@ -13,15 +13,21 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         >
-    <Border CornerRadius="58"
-            Background="#3D98A3"
-            BorderThickness="5">
-        <Border.BorderBrush>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#083A4D" Offset="0"/>
-                <GradientStop Color="#3E6057" Offset="0.75"/>
-                <GradientStop Color="#083A4D" Offset="0"/>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
+    <Border CornerRadius="58">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/back-image.jpg" />
+        </Border.Background>
+        <Border CornerRadius="58"                
+                Background="#3D98A3"
+                BorderThickness="5"
+                Opacity="0.75">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#083A4D" Offset="0"/>
+                    <GradientStop Color="#3E6057" Offset="0.75"/>
+                    <GradientStop Color="#083A4D" Offset="0"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
     </Border>
 </Window>
