@@ -39,7 +39,15 @@
                     <ColumnDefinition Width="25"/>
                     <ColumnDefinition Width="5"/>
                 </Grid.ColumnDefinitions>
+                <TextBlock Text="Bejelentkezés"
+                           Margin="2 2 0 2"
+                           Foreground="White"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           FontSize="12"                           
+                />
             </Grid>
+
         </Border>
     </Border>
 </Window>
