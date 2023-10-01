@@ -46,8 +46,25 @@
                            Grid.Row="0"
                            FontSize="12"                           
                 />
+                <Button x:Name="btnMinimize"
+                        BorderThickness="0"
+                        Content="-"
+                        FontSize="20"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        Grid.Row="0"
+                        Grid.Column="1">
+                </Button>
+                <Button x:Name="btnClose"
+                        BorderThickness="0"
+                        Content="X"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        FontSize="16"
+                        FontFamily="Montserrat"
+                        Cursor="Hand">
+                </Button>
             </Grid>
-
         </Border>
     </Border>
 </Window>
