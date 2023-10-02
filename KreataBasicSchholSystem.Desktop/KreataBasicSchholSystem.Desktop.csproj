@@ -9,6 +9,9 @@
 
   <ItemGroup>
     <None Remove="Images\back-image.jpg" />
+    <None Remove="Images\key-icon.png" />
+    <None Remove="Images\kreta.png" />
+    <None Remove="Images\user-icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +21,9 @@
 
   <ItemGroup>
     <Resource Include="Images\back-image.jpg" />
+    <Resource Include="Images\key-icon.png" />
+    <Resource Include="Images\kreta.png" />
+    <Resource Include="Images\user-icon.png" />
   </ItemGroup>
 
 </Project>
