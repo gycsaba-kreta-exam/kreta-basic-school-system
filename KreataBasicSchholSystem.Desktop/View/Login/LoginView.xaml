@@ -24,13 +24,14 @@
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#083A4D" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.25"/>
                     <GradientStop Color="#3E6057" Offset="0.75"/>
                     <GradientStop Color="#083A4D" Offset="0"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -40,31 +41,82 @@
                     <ColumnDefinition Width="5"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Bejelentkezés"
-                           Margin="2 2 0 2"
+                           Margin="2,4,0,2"
                            Foreground="White"
                            Grid.Column="0"
                            Grid.Row="0"
-                           FontSize="12"                           
+                           FontSize="16"    
                 />
-                <Button x:Name="btnMinimize"
-                        BorderThickness="0"
+                <Button x:Name="btnMinimize"                        
                         Content="-"
-                        FontSize="20"
+                        BorderThickness="0"
+                        Foreground="White"
+                        FontSize="12"
                         FontFamily="Montserrat"
                         Cursor="Hand"
-                        Grid.Row="0"
                         Grid.Column="1"
-                        Click="btnMinimize_Click">
+                        Click="btnMinimize_Click"  VerticalAlignment="Center" >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#3E6057"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#083A4D"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <StackPanel>
+                                <Border Width="18"
+                                        Height="18"
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="9">
+                                    <ContentPresenter 
+                                        HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                    />
+                                </Border>
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Button.Template>
                 </Button>
                 <Button x:Name="btnClose"
-                        BorderThickness="0"
                         Content="X"
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        FontSize="16"
+                        BorderThickness="0"
+                        Foreground="White"
+                        FontSize="11"
                         FontFamily="Montserrat"
                         Cursor="Hand"
-                        Click="btnClose_Click">
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Click="btnClose_Click" Margin="0,6,0,0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#3E6057"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#083A4D"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <StackPanel>
+                                <Border Width="18"
+                                     Height="18"
+                                     Background="{TemplateBinding Background}"
+                                     CornerRadius="9">
+                                        <ContentPresenter
+                                            HorizontalAlignment="Center"  
+                                            VerticalAlignment="Center"
+                                />  
+                                </Border>
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Button.Template>
                 </Button>
             </Grid>
         </Border>
