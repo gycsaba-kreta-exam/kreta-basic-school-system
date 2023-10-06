@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Security;
+using System.Windows.Navigation;
 
 namespace KreataBasicSchholSystem.Desktop.ViewModels
 {
@@ -14,5 +16,16 @@ namespace KreataBasicSchholSystem.Desktop.ViewModels
         private string _errorMessage;
         [ObservableProperty]
         private bool _isViewVisible = true;
+
+        [RelayCommand(CanExecute = nameof(IsUsernameAndPasswordValid))]
+        private void Login()
+        {
+
+        }
+
+        private bool IsUsernameAndPasswordValid()
+        {
+            return true;
+        }
     }
 }
