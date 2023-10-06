@@ -65,7 +65,6 @@
                             BorderThickness="0"
                             Foreground="White"
                             FontSize="12"
-                            FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMinimize_Click"  VerticalAlignment="Center" >
