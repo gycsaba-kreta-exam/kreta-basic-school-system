@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KreataBasicSchholSystem.Desktop.Views.Login"
         xmlns:viewmodel="clr-namespace:KreataBasicSchholSystem.Desktop.ViewModels"
+        xmlns:controls="clr-namespace:KreataBasicSchholSystem.Desktop.Controls"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
         WindowStyle="None"
@@ -175,24 +176,11 @@
                                    FontWeight="Medium"
                                    FontFamily="Montserrat"                             
                                    Margin="0,15,0,0"/>
-                        <PasswordBox x:Name="txtPass"
-                                     FontSize="13"
-                                     FontWeight="Medium"
-                                     FontFamily="Montserrat"                            
-                                     Foreground="White"
-                                     CaretBrush="LightGray"
-                                     BorderBrush="DarkGray"
-                                     BorderThickness="0,0,0,2"
-                                     Height="28"
-                                     VerticalContentAlignment="Center"
-                                     Margin="0,5,0,0"
-                                     Padding="20,0,0,0">
-                                    <PasswordBox.Background>
-                                        <ImageBrush ImageSource="/Images/key-icon.png"
-                                                Stretch="None"
-                                                AlignmentX="Left"/>
-                                    </PasswordBox.Background>
-                                </PasswordBox>
+                        <controls:BindablePasswordBox Password="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                      Height="28"
+                                                      Margin="0,5,0,0">
+                            
+                        </controls:BindablePasswordBox>
                         <Button x:Name="btnLogin"                          
                             BorderThickness="0"
                             Content="LOG IN"
