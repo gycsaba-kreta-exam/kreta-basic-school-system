@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KreataBasicSchholSystem.Desktop.Views.Login"
+        xmlns:viewmodel="clr-namespace:KreataBasicSchholSystem.Desktop.ViewModels"
+        xmlns:controls="clr-namespace:KreataBasicSchholSystem.Desktop.Controls"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
         WindowStyle="None"
@@ -13,6 +15,16 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
+    </Window.Visibility>
+    <Window.DataContext>
+        <viewmodel:LoginViewModel/>
+    </Window.DataContext>
     <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/Images/back-image.jpg" />
@@ -54,7 +66,6 @@
                             BorderThickness="0"
                             Foreground="White"
                             FontSize="12"
-                            FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMinimize_Click"  VerticalAlignment="Center" >
@@ -142,16 +153,17 @@
                             
                                Margin="0,35,0,0"/>
                         <TextBox x:Name="txtUser"
-                             FontSize="13"
-                             FontWeight="Medium"                      
-                             Foreground="White"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,2"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"
-                             Padding="20,0,0,0">
+                                 Text="{Binding Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                 FontSize="13"
+                                 FontWeight="Medium"                      
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalContentAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0">
                             <TextBox.Background>
                                 <ImageBrush ImageSource="/Images/user-icon.png"
                                         Stretch="None"
@@ -159,57 +171,45 @@
                             </TextBox.Background>
                         </TextBox>
                         <TextBlock Text="Password"
-                               Foreground="DarkGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"                             
-                               Margin="0,15,0,0"/>
-                        <PasswordBox x:Name="txtPass"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                            
-                             Foreground="White"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,2"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"
-                             Padding="20,0,0,0">
-                            <PasswordBox.Background>
-                                <ImageBrush ImageSource="/Images/key-icon.png"
-                                        Stretch="None"
-                                        AlignmentX="Left"/>
-                            </PasswordBox.Background>
-                        </PasswordBox>
-                        <Button x:Name="btnLogin"                          
-                            BorderThickness="0"
-                            Content="LOG IN"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"                           
-                            Margin="0,50,0,0">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#3E6057"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#083A4D"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
-                                        <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                   Foreground="DarkGray"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,15,0,0"/>
+                        <controls:BindablePasswordBox Password="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                      Height="28"
+                                                      Margin="0,5,0,0">
+                            
+                        </controls:BindablePasswordBox>
+                        <Button x:Name="btnLogin"  
+                                Command="{Binding LoginCommand}"
+                                BorderThickness="0"
+                                Content="LOG IN"
+                                Foreground="White"
+                                FontSize="12"
+                                FontFamily="Montserrat"
+                                Cursor="Hand"                           
+                                Margin="0,50,0,0">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#3E6057"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#083A4D"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="150" Height="40"
+                                            CornerRadius="20"
+                                            Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
                         </Button>
                         <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
