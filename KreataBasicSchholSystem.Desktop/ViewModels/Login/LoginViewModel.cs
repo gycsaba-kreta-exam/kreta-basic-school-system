@@ -1,13 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using KreataBasicSchholSystem.Desktop.Repositories;
+using System.Net;
 using System.Security;
 using System.Security.Principal;
 using System.Threading;
 
-namespace KreataBasicSchholSystem.Desktop.ViewModels
+namespace KreataBasicSchholSystem.Desktop.ViewModels.Login
 {
     partial class LoginViewModel : ObservableObject
     {
+        private UserRepository _userRepository=new();
+
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
         private string _username=string.Empty;
@@ -24,7 +28,8 @@ namespace KreataBasicSchholSystem.Desktop.ViewModels
         [RelayCommand(CanExecute = nameof(IsUsernameAndPasswordValid))]
         private void Login()
         {
-            var isValidUser = false;
+            var isValidUser = _userRepository.AuthenticateUser(new NetworkCredential(Username, Password)); ; 
+
             if (isValidUser)
             {
                 Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(Username), null);
