@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using KreataBasicSchholSystem.Desktop.Models;
-using KreataBasicSchholSystem.Desktop.Repositories;
+using KreataBasicSchoolSystem.Desktop.Models;
+using KreataBasicSchoolSystem.Desktop.Repositories;
 using System;
 using System.Threading;
 
-namespace KreataBasicSchholSystem.Desktop.ViewModels
+namespace KreataBasicSchoolSystem.Desktop.ViewModels
 {
     public partial class MainViewModel : ObservableObject
     {

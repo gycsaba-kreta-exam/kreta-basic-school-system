@@ -1,4 +1,4 @@
-﻿namespace KreataBasicSchholSystem.Desktop.Models
+﻿namespace KreataBasicSchoolSystem.Desktop.Models
 {
     public class UserAccount
     {

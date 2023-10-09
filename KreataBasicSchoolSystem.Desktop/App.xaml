@@ -1,7 +1,7 @@
-﻿<Application x:Class="KreataBasicSchholSystem.Desktop.App"
+﻿<Application x:Class="KreataBasicSchoolSystem.Desktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:KreataBasicSchholSystem.Desktop"
+             xmlns:local="clr-namespace:KreataBasicSchoolSystem.Desktop"
              Startup="Application_Startup">
     <Application.Resources>
          

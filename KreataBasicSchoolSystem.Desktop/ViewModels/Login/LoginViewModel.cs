@@ -1,12 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using KreataBasicSchholSystem.Desktop.Repositories;
+using KreataBasicSchoolSystem.Desktop.Repositories;
 using System.Net;
 using System.Security;
 using System.Security.Principal;
 using System.Threading;
 
-namespace KreataBasicSchholSystem.Desktop.ViewModels.Login
+namespace KreataBasicSchoolSystem.Desktop.ViewModels.Login
 {
     partial class LoginViewModel : ObservableObject
     {

@@ -1,8 +1,8 @@
-﻿using KreataBasicSchholSystem.Desktop.Views;
-using KreataBasicSchholSystem.Desktop.Views.Login;
+﻿using KreataBasicSchoolSystem.Desktop.Views;
+using KreataBasicSchoolSystem.Desktop.Views.Login;
 using System.Windows;
 
-namespace KreataBasicSchholSystem.Desktop
+namespace KreataBasicSchoolSystem.Desktop
 {
     /// <summary>
     /// Interaction logic for App.xaml
