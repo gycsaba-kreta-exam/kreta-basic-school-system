@@ -4,7 +4,7 @@ using System.Security;
 using System.Security.Principal;
 using System.Threading;
 
-namespace KreataBasicSchholSystem.Desktop.ViewModels
+namespace KreataBasicSchholSystem.Desktop.ViewModels.Login
 {
     partial class LoginViewModel : ObservableObject
     {

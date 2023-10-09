@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KreataBasicSchholSystem.Desktop.Views.Login"
-        xmlns:viewmodel="clr-namespace:KreataBasicSchholSystem.Desktop.ViewModels"
+        xmlns:viewModel="clr-namespace:KreataBasicSchholSystem.Desktop.ViewModels.Login"
         xmlns:controls="clr-namespace:KreataBasicSchholSystem.Desktop.Controls"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
@@ -23,7 +23,7 @@
         <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
     </Window.Visibility>
     <Window.DataContext>
-        <viewmodel:LoginViewModel/>
+        <viewModel:LoginViewModel/>
     </Window.DataContext>
     <Border CornerRadius="12">
         <Border.Background>
