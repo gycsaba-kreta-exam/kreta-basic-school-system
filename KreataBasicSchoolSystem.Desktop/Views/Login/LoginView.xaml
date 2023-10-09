@@ -30,15 +30,15 @@
             <ImageBrush ImageSource="/Images/back-image.jpg" />
         </Border.Background>
         <Border CornerRadius="10"                
-                Background="#3D98A3"
+                Background="{StaticResource backgroundPrimaryColor1}"
                 BorderThickness="5"
                 Opacity="0.95">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#083A4D" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.25"/>
-                    <GradientStop Color="#3E6057" Offset="0.75"/>
-                    <GradientStop Color="#083A4D" Offset="0"/>
+                    <GradientStop Color="{StaticResource borderColor1}" Offset="0"/>
+                    <GradientStop Color="{StaticResource borderColor2}" Offset="0.25"/>
+                    <GradientStop Color="{StaticResource borderColor3}" Offset="0.75"/>
+                    <GradientStop Color="{StaticResource borderColor4}" Offset="0"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
             <StackPanel Orientation="Vertical">
@@ -55,7 +55,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Bejelentkezés"
                                Margin="2,4,0,2"
-                               Foreground="White"
+                               Foreground="{StaticResource titleColor1}"
                                FontWeight="Bold"
                                Grid.Column="0"
                                Grid.Row="0"
