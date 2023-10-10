@@ -1,39 +1,33 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using KreataBasicSchoolSystem.Desktop.Models;
-using KreataBasicSchoolSystem.Desktop.Repositories;
-using System;
+using CommunityToolkit.Mvvm.Input;
+using FontAwesome.Sharp;
+using KretaBasicSchoolSystem.Desktop.Models;
+using KretaBasicSchoolSystem.Desktop.Repositories;
 using System.Threading;
 
-namespace KreataBasicSchoolSystem.Desktop.ViewModels
+namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
     public partial class MainViewModel : ObservableObject
-    {
-        private UserRepository _userRepository = new();
+    {      
+        [ObservableProperty]
+        private string _caption=string.Empty;
 
         [ObservableProperty]
-        private UserAccount _currentUser=new();
+        private IconChar _icon;
+
+        [ObservableProperty]
+        private ObservableObject _currentChildView;
 
         public MainViewModel()
         {
-            LoadCurrentUserData();
+               ShowDashbord();
         }
 
-        private void LoadCurrentUserData()
+        [RelayCommand]
+        public void ShowDashbord()
         {
-            if (Thread.CurrentPrincipal is not null && Thread.CurrentPrincipal.Identity is not null && Thread.CurrentPrincipal.Identity.Name is not null)
-            {
-                User? user=_userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
-
-                if (user is not null)
-                {
-                    CurrentUser.Username = user.Username;
-                    CurrentUser.DisplayName = user.HungarianFullName;
-                }
-                else
-                {
-                    CurrentUser.DisplayName = "Hibás felhaszálói név! A bejelentkezés nem sikerült!";
-                }
-            }
+            Caption = "Vezérlőpult";
+            Icon=IconChar.Home;
         }
     }
 }
