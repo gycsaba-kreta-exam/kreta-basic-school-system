@@ -1,10 +1,10 @@
-﻿<Window x:Class="KreataBasicSchoolSystem.Desktop.Views.MainView"
+﻿<Window x:Class="KretaBasicSchoolSystem.Desktop.Views.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KreataBasicSchoolSystem.Desktop.Views"
-        xmlns:viewModel="clr-namespace:KreataBasicSchoolSystem.Desktop.ViewModels"
+        xmlns:local="clr-namespace:KretaBasicSchoolSystem.Desktop.Views"
+        xmlns:viewModel="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="KRÉTA" Height="700" Width="1300"
@@ -16,9 +16,7 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    <Border CornerRadius="10"                    
-                BorderThickness="1">
-        
+    <Border CornerRadius="10" BorderThickness="1">
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="{StaticResource borderColor1}" Offset="0"/>
@@ -43,32 +41,9 @@
                         <GradientStop Color="{StaticResource backgroundPrimaryColor2}" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <StackPanel>
-                    <StackPanel Orientation="Horizontal" 
-                                HorizontalAlignment="Center"
-                                Height="55"
-                                Margin="0,24,0,0">
-
-                        <Image Source="/Images/kreta_atl.png" Height="40"/>
-                    </StackPanel>
-
-                    <!--Menu Buttons-->
-                    <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource colorGreen}"
-                                 IsChecked="True">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource colorMidleGreen}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Customers" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-                </StackPanel>
+                     
+                    <!-- Menu buttons -->
+                    <local:MenuButtons />
             </Border>
 
             <!--Content -->
@@ -121,8 +96,38 @@
                                 Click="btnMinimize_Click">
                             <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
-
                     </StackPanel>
+
+                    <!--Header / Caption-->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- User options -->
+                        <local:UserOptionControl Grid.Column="1"/>
+
+                        <!--Caption-->
+                        <StackPanel Grid.Column="0"
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center">
+                            <fa:IconImage Icon="{Binding Icon}"
+                                        Height="20"
+                                        Width="20"
+                                        Foreground="{StaticResource titleColor1}"
+                                        Margin="35,0,10,0"/>
+
+                            <TextBlock Text="{Binding Caption}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="16"
+                                    FontWeight="Medium"
+                                    VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <!--User options-->
+                        
+                    </Grid>
                 </Grid>
             </Border>
         </Grid>

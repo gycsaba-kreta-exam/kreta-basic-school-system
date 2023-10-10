@@ -10,7 +10,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 
 
-namespace KreataBasicSchoolSystem.Desktop.Views
+namespace KretaBasicSchoolSystem.Desktop.Views
 {
     /// <summary>
     /// Interaction logic for MainView.xaml

@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace KreataBasicSchoolSystem.Desktop.Controls
+namespace KretaBasicSchoolSystem.Desktop.Controls
 {
     /// <summary>
     /// Interaction logic for BindablePasswordBox.xaml
