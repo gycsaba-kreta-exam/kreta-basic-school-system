@@ -30,7 +30,7 @@
             <ImageBrush ImageSource="/Images/back-image.jpg" />
         </Border.Background>
         <Border CornerRadius="10"                
-                Background="{StaticResource backgroundPrimaryColor1}"
+                Background="{StaticResource backgroundPrimaryColor}"
                 BorderThickness="5"
                 Opacity="0.95">
             <Border.BorderBrush>

@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:KreataBasicSchoolSystem.Desktop"
              Startup="Application_Startup">
     <Application.Resources>
-        <ResourceDictionary Source="/Styles/UIColors.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/UIColors.xaml" />
+                <ResourceDictionary Source="/Styles/MenuButtons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
