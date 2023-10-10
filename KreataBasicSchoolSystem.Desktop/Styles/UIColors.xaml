@@ -18,6 +18,9 @@
     <SolidColorBrush x:Key="colorGreen" Color="#00FF33"/>
     <SolidColorBrush x:Key="colorMidleGreen" Color="#01CB33"/>
     <SolidColorBrush x:Key="colorDarkGreen" Color="#029120"/>
+    <!-- Control button color-->
+    <SolidColorBrush x:Key="controlBackgraoundColor" Color="#3E6057"/>
+    <SolidColorBrush x:Key="controlHoverColor" Color="#083A4D "/>
     <!--Font Colors-->
     <SolidColorBrush x:Key="titleColor1" Color="White"/>
     <SolidColorBrush x:Key="titleColor2" Color="#EEEEFF"/>
