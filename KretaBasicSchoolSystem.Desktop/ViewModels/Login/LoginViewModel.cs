@@ -28,7 +28,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.Login
         [RelayCommand(CanExecute = nameof(IsUsernameAndPasswordValid))]
         private void Login()
         {
-            var isValidUser = _userRepository.AuthenticateUser(new NetworkCredential(Username, Password)); ; 
+            var isValidUser = _userRepository.AuthenticateUser(new NetworkCredential(Username, Password));
 
             if (isValidUser)
             {
