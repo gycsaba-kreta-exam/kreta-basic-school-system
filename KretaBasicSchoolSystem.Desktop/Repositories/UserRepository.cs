@@ -16,12 +16,12 @@ namespace KretaBasicSchoolSystem.Desktop.Repositories
         {
              return new User
              {
-                 Username = "gycsaba",
-                 Email = "gyuris.csaba@vasvari.org",
-                 FirstName = "Csaba",
-                 LastName = "Gyuris"
+                 Username = "teszt",
+                 Email = "teszt@teszt.hu",
+                 FirstName = "Elek",
+                 LastName = "Teszt",
+                 Password = "test@123"
              };
-            //return null;
         }
     }
 }
