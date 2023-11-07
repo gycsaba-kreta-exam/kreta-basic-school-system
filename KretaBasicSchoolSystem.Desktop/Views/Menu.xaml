@@ -17,7 +17,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel Orientation="Vertical">
-                <StackPanel Orientation="Vertical" Margin="0 10 0 0">
+                <StackPanel Orientation="Vertical" Margin="0 10 0 20">
                     <Border Width="80" 
                             Height="80" 
                             Padding="1" 
@@ -38,7 +38,7 @@
                              IsChecked="True"
                              Command="{Binding ShowDashbordCommand}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                            <fa:IconImage Icon="SolarPanel" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Vezérőpul" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
@@ -52,15 +52,15 @@
                     <RadioButton Style="{StaticResource menuButton}"
                              Tag="{StaticResource colorMidleGreen}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Iskolapolgárok" Style="{StaticResource menuButtonText}"/>
+                            <fa:IconImage Icon="ChalkboardUser" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Osztályok" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
                              Tag="{StaticResource colorMidleGreen}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Iskolapolgárok" Style="{StaticResource menuButtonText}"/>
+                            <fa:IconImage Icon="GraduationCap" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Tantárgyak" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>
