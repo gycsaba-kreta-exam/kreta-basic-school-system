@@ -6,6 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ViewModelViewDataTamplate.xaml"/>
                 <ResourceDictionary Source="/Styles/UIColors.xaml" />
                 <ResourceDictionary Source="/Styles/MenuButtons.xaml" />
                 <ResourceDictionary Source="/Styles/ControlBarButton.xaml" />

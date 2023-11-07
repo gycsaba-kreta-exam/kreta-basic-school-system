@@ -3,9 +3,10 @@
     <!--Background Colors-->
     <SolidColorBrush x:Key="backgroundPrimaryColor" Color="#3D98A3"/>
     <Color x:Key="backgroundPrimaryColor1">#3D98A3</Color>
-    <Color x:Key="backgroundPrimaryColor2">#3D9893</Color>
-    <Color x:Key="backgroundSecondaryColor1">#3D98A7</Color>
-    <Color x:Key="backgroundSecondaryColor2">#3D9897</Color>
+    <Color x:Key="backgroundPrimaryColor2">#6D92A3</Color>
+    <Color x:Key="backgroundSecondaryColor1">#00FF33</Color>
+    <Color x:Key="backgroundSecondaryColor2">#01CB33</Color>
+    <Color x:Key="backgroundSecondaryColor3">#029120</Color>
     <!--Window Border Colors-->
     <Color x:Key="borderColor1">#3D98A3</Color>
     <Color x:Key="borderColor2">White</Color>

@@ -3,7 +3,7 @@ using KretaBasicSchoolSystem.Desktop.Models;
 using KretaBasicSchoolSystem.Desktop.Repositories;
 using System.Threading;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels
+namespace KretaBasicSchoolSystem.Controls.ViewModels
 {
     public partial class UserOptionControlViewModel : ObservableObject
     {

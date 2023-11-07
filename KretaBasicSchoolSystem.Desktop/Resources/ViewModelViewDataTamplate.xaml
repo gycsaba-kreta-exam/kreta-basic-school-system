@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controlpanelviewmodels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel"
+                    xmlns:controlpanelview="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.ControlPanel"
+                    >
+    <DataTemplate DataType="{x:Type controlpanelviewmodels:ControlPanelViewModel}">
+        <controlpanelview:ControlPanelView></controlpanelview:ControlPanelView>
+    </DataTemplate>        
+</ResourceDictionary>

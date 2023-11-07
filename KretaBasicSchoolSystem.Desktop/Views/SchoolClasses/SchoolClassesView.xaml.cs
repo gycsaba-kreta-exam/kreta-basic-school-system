@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KretaBasicSchoolSystem.Desktop.Views
+namespace KretaBasicSchoolSystem.Desktop.Views.SchoolClasses
 {
     /// <summary>
-    /// Interaction logic for MenuButtons.xaml
+    /// Interaction logic for SchoolClassesView.xaml
     /// </summary>
-    public partial class MenuButtons : UserControl
+    public partial class SchoolClassesView : UserControl
     {
-        public MenuButtons()
+        public SchoolClassesView()
         {
             InitializeComponent();
         }

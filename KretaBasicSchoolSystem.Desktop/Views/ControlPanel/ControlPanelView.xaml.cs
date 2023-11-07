@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KretaBasicSchoolSystem.Desktop
+namespace KretaBasicSchoolSystem.Desktop.Views.ControlPanel
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ControlPanelView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ControlPanelView : UserControl
     {
-        public MainWindow()
+        public ControlPanelView()
         {
             InitializeComponent();
         }
