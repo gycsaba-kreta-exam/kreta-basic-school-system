@@ -3,7 +3,6 @@ using KretaBasicSchoolSystem.Desktop.Views.Login;
 using KretaDesktop.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.VisualBasic.Logging;
 using System;
 using System.Windows;
 
@@ -14,7 +13,7 @@ namespace KretaBasicSchoolSystem.Desktop
     /// </summary>
     public partial class App : Application
     {
-        private bool _loginPage = false;
+        private bool _loginPage = true;
         private IHost host;
 
 
@@ -34,8 +33,25 @@ namespace KretaBasicSchoolSystem.Desktop
             await host.StartAsync();
             try
             {
-                var window = host.Services.GetRequiredService<MainView>();
-                window.Show();
+                if (_loginPage)
+                {
+                    var loginView = host.Services.GetRequiredService<LoginView>();
+                    loginView.Show();
+                    loginView.IsVisibleChanged += (s, ev) =>
+                    {
+                        if (loginView.IsVisible == false && loginView.IsLoaded)
+                        {
+                            var mainView = host.Services.GetRequiredService<MainView>();
+                            mainView.Show();
+                            loginView.Close();
+                        }
+                    };
+                }
+                else
+                {
+                    var mainView = host.Services.GetRequiredService<MainView>();
+                    mainView.Show();
+                } 
             }
             catch (Exception)
             {
@@ -49,26 +65,6 @@ namespace KretaBasicSchoolSystem.Desktop
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-
-            /*if (_loginPage)
-            {
-                var loginView = new LoginView();
-                loginView.Show();
-                loginView.IsVisibleChanged += (s, ev) =>
-                {
-                    if (loginView.IsVisible == false && loginView.IsLoaded)
-                    {
-                        var mainView = new MainView();
-                        mainView.Show();
-                        loginView.Close();
-                    }
-                };
-            }
-            else
-            {
-                var mainView = new MainView();
-                mainView.Show();
-            } */           
         }
 
 

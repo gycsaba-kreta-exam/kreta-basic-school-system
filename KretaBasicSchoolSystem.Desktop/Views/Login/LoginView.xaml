@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.Login"
-        xmlns:viewModel="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.Login"
+        xmlns:viewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.Login"
+        d:DataContext="{d:DesignInstance viewModels:LoginViewModel}"
         xmlns:controls="clr-namespace:KretaBasicSchoolSystem.Desktop.Controls"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
@@ -22,9 +23,6 @@
     <Window.Visibility>
         <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
     </Window.Visibility>
-    <Window.DataContext>
-        <viewModel:LoginViewModel/>
-    </Window.DataContext>
     <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/Images/back-image.jpg" />
