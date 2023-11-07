@@ -33,24 +33,28 @@
             </Grid.ColumnDefinitions>
 
             <!--Navigation Menu-->
-            <Border CornerRadius="10,0,0,10"
-                    Grid.Column="0">
+            <Border CornerRadius="10,0,0,10" Grid.Column="0">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                        <GradientStop Color="{StaticResource backgroundSecondaryColor1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource backgroundPrimaryColor1}" Offset="0"/>
                         <GradientStop Color="{StaticResource backgroundPrimaryColor2}" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                     
+                <StackPanel Orientation="Vertical"                     
+                    Margin="0,0,0,0">
+                    <Image Margin="0 30 0 0" Source="/Images/kreta_atl.png" Height="40"/>
                     <!-- Menu buttons -->
-                    <local:MenuButtons />
+
+                    <local:Menu Margin="0 20 0 0"/>
+
+                </StackPanel>
             </Border>
 
             <!--Content -->
             <Border CornerRadius="0,10,10,0"
                     Grid.Column="1">
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                         <GradientStop Color="{StaticResource backgroundPrimaryColor1}" Offset="0"/>
                         <GradientStop Color="{StaticResource borderColor1}" Offset="0.8"/>
                         <GradientStop Color="{StaticResource backgroundPrimaryColor2}" Offset="1"/>
