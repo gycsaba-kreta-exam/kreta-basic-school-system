@@ -3,11 +3,14 @@ using CommunityToolkit.Mvvm.Input;
 using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
+using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
     public partial class MainViewModel : BaseViewModel
     {
+        private ControlPanelViewModel _controlPanelViewModel;
+
         [ObservableProperty]
         private string _caption = string.Empty;
 
@@ -17,10 +20,11 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         [ObservableProperty]
         private BaseViewModel _currentChildView;
 
-        public MainViewModel()
+        public MainViewModel(ControlPanelViewModel controlPanelViewModel)
         {
+            _controlPanelViewModel = controlPanelViewModel;
+            CurrentChildView = _currentChildView;
             ShowDashbord();
-            CurrentChildView = this;
         }
 
         [RelayCommand]
@@ -28,7 +32,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         {
             Caption = "Vezérlőpult";
             Icon=IconChar.Home;
-            CurrentChildView = new ControlPanelViewModel();
+            CurrentChildView = _controlPanelViewModel;
         }
     }
 }

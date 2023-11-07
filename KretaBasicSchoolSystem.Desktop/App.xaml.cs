@@ -29,7 +29,6 @@ namespace KretaBasicSchoolSystem.Desktop
 
         }
 
-
         protected async override void OnStartup(StartupEventArgs e)
         {
             await host.StartAsync();
@@ -38,7 +37,7 @@ namespace KretaBasicSchoolSystem.Desktop
                 var window = host.Services.GetRequiredService<MainView>();
                 window.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
