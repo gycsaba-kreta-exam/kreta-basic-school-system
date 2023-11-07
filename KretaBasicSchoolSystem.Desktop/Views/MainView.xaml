@@ -16,11 +16,12 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+    <!-- Full page -->
     <Border CornerRadius="10" BorderThickness="1">
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="{StaticResource borderColor1}" Offset="0"/>
-                <GradientStop Color="{StaticResource borderColor2}" Offset="0.5"/>
+                <GradientStop Color="{StaticResource borderColor2}" Offset="0.4"/>
                 <GradientStop Color="{StaticResource borderColor3}" Offset="1"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
@@ -42,11 +43,10 @@
                 </Border.Background>
                 <StackPanel Orientation="Vertical"                     
                     Margin="0,0,0,0">
+                    <!-- Logo -->
                     <Image Margin="0 30 0 0" Source="/Images/kreta_atl.png" Height="40"/>
                     <!-- Menu buttons -->
-
                     <local:Menu Margin="0 20 0 0"/>
-
                 </StackPanel>
             </Border>
 

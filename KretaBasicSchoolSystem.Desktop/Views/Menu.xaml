@@ -14,11 +14,24 @@
                     <GradientStop Color="{StaticResource backgroundSecondaryColor2}" Offset="0.1"/>
                     <GradientStop Color="{StaticResource backgroundPrimaryColor2}" Offset="0.5"/>
                     <GradientStop Color="{StaticResource backgroundPrimaryColor1}" Offset="0.7"/>
-                    <GradientStop Color="{StaticResource backgroundSecondaryColor1}" Offset="0.9"/>
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel Orientation="Vertical">
-                <StackPanel Orientation="Vertical" Margin="0 80 0 0">
+                <StackPanel Orientation="Vertical" Margin="0 10 0 0">
+                    <Border Width="80" 
+                            Height="80" 
+                            Padding="1" 
+                            Margin="0 10 0 10" 
+                            >
+                        <Ellipse Height="80" Width="80"
+                            Stroke="{StaticResource colorDarkGreen}"                            
+                            StrokeThickness="2"                                 
+                            Margin="-1,-1,-1,-1">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/Images/noprofil.jpg"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Border>
                     <!--Menu Buttons-->
                     <RadioButton Style="{StaticResource menuButton}"
                              Tag="{StaticResource colorGreen}"                                 
