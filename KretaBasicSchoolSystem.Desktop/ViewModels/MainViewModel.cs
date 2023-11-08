@@ -38,7 +38,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         public void ShowDashbord()
         {
             Caption = "Vezérlőpult";
-            Icon=IconChar.Home;
+            Icon=IconChar.SolarPanel;
             CurrentChildView = _controlPanelViewModel;
         }
 

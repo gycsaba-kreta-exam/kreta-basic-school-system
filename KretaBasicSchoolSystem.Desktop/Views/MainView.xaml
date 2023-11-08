@@ -59,11 +59,11 @@
 
                 <Grid>
                     <Grid.RowDefinitions>
-                        <!--Control bar-->
+                        <!--Control bar -->
                         <RowDefinition Height="25"/>
-                        <!--Header / Caption-->
+                        <!--Header / Caption -->
                         <RowDefinition Height="35"/>
-                        <!--Content section / Child views-->
+                        <!--Content section / Child views -->
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
@@ -108,7 +108,7 @@
                         <!-- User options -->
                         <local:UserOptionControl Grid.Column="1"/>
 
-                        <!--Caption-->
+                        <!--Caption -->
                         <StackPanel Grid.Column="0"
                                 Orientation="Horizontal"
                                 VerticalAlignment="Center">
@@ -124,13 +124,12 @@
                                     FontWeight="Medium"
                                     VerticalAlignment="Center"/>
                         </StackPanel>
-
-                        <!--Content section / Child views-->
-                        <ContentControl Content="{Binding CurrentChildView}"
-                                    Grid.Row="2"
-                                    Margin="10,60,10,10"/>
-
                     </Grid>
+                    
+                    <!--Content section / Child views -->
+                    <ContentControl Content="{Binding CurrentChildView}"
+                                    Grid.Row="2"                                        
+                                    Margin="10,30,10,10"/>
                 </Grid>
             </Border>
         </Grid>

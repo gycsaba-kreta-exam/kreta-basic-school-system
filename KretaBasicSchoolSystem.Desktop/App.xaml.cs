@@ -1,7 +1,5 @@
 ﻿using KretaBasicSchoolSystem.Desktop.Views;
-using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
-using KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
 using KretaDesktop.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,9 +13,8 @@ namespace KretaBasicSchoolSystem.Desktop
     /// </summary>
     public partial class App : Application
     {
-        private bool _loginPage = true;
+        private bool _loginPage = false;
         private IHost host;
-
 
         public App()
         {
@@ -46,7 +43,12 @@ namespace KretaBasicSchoolSystem.Desktop
                             var mainView = host.Services.GetRequiredService<MainView>();
                             mainView.Show();
                             
-                            loginView.Close();
+                            try
+                            {
+                                loginView.Close();
+                            }
+                            catch  { }
+                            
                         }
                     };
                 }
@@ -61,8 +63,10 @@ namespace KretaBasicSchoolSystem.Desktop
             }
         }
 
-        protected override void OnExit(ExitEventArgs e)
+        protected override async void OnExit(ExitEventArgs e)
         {
+            await host.StopAsync();
+            host.Dispose();
             base.OnExit(e);
         }
 
