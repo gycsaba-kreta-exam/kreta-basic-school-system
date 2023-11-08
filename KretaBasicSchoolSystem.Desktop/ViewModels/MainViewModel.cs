@@ -21,6 +21,12 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         [ObservableProperty]
         private BaseViewModel _currentChildView;
 
+        public MainViewModel()
+        {
+            _controlPanelViewModel = new ControlPanelViewModel();
+            _schoolCitizensViewModel = new SchoolCitizensViewModel();
+        }
+
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
             SchoolCitizensViewModel schoolCitizensViewModel 
