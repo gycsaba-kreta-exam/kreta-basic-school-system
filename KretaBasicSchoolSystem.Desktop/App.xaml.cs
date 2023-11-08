@@ -1,5 +1,7 @@
 ﻿using KretaBasicSchoolSystem.Desktop.Views;
+using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
+using KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
 using KretaDesktop.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -43,6 +45,7 @@ namespace KretaBasicSchoolSystem.Desktop
                         {
                             var mainView = host.Services.GetRequiredService<MainView>();
                             mainView.Show();
+                            
                             loginView.Close();
                         }
                     };
@@ -66,7 +69,5 @@ namespace KretaBasicSchoolSystem.Desktop
         private void Application_Startup(object sender, StartupEventArgs e)
         {
         }
-
-
     }
 }

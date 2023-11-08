@@ -33,17 +33,22 @@
                         </Ellipse>
                     </Border>
                     <!--Menu Buttons-->
-                    <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorGreen}"                                 
-                             IsChecked="True"
-                             Command="{Binding ShowDashbordCommand}">
+                    <RadioButton 
+                        Style="{StaticResource menuButton}"
+                        Tag="{StaticResource colorGreen}"                                 
+                        IsChecked="True"
+                        Command="{Binding ShowDashbordCommand}"
+                        >
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="SolarPanel" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Vezérőpul" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorMidleGreen}">
+                    <RadioButton
+                        Style="{StaticResource menuButton}"
+                        Tag="{StaticResource colorMidleGreen}"
+                        Command="{Binding ShowSchoolCitizensCommand}"                    
+                     >
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Iskolapolgárok" Style="{StaticResource menuButtonText}"/>
